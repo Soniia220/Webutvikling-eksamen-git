@@ -1,0 +1,6 @@
+@SportsWorld_HostAddress = http://localhost:5070
+
+GET {{SportsWorld_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

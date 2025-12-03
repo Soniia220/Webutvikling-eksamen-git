@@ -1,6 +1,16 @@
+
+
+using Microsoft.EntityFrameworkCore;
+using SportsWorldAPI.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<SportsWorldContext>(
+// Angir hvor DB skal lages og hva den skal hete
+options => options.UseSqlite("Data Source=Database/SportsWorld.db")
+
+);
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
